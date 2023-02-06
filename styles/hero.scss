@@ -1,0 +1,16 @@
+.hero {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ad {
+        display: flex;
+        flex-direction: column;
+        gap: 29px 0;
+
+        .button {
+            align-self: flex-start;
+        }
+    }
+}
