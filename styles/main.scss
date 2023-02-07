@@ -1,12 +1,96 @@
-@import './reset.css';
-@import './buttons';
+@import './layout/reset.css';
+@import './layout/buttons';
+@import './layout/topography';
+@import './layout/fonts';
+@import './layout/breakpoints';
+@import './components/card/card';
+
+:root {
+    --light-blue: #666CA3;
+    --dark-blue: #13183F;
+    --light-grey: #83869A;
+    --dark-pink: #F74780;
+    --light-pink: #FFA7C3;
+}
+
+body {
+    font-family: Plus Jakarta Sans;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+    overflow-x: hidden;
+    line-height: 28px;
+
+    @include desktop {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width:$desktop) {
+        font-size: 1.125rem;
+    }
+
+}
+
+
+img {
+    max-width: 100%;
+}
+
+p {
+    color: var(--light-grey);
+}
+
+
 
 
 .container {
-    max-width: 1110px;
-    margin: auto;
+    @include mobile {
+        margin: 0 1rem;
+    }
+
+    @include tablet {
+        margin: 0 2.5rem;
+    }
+
+    @include desktop {
+        max-width: 1110px;
+        margin: auto;
+    }
+
 }
 
-img{
-    max-width: 100%;
+.header {
+    position: relative;
+    z-index: 2;
+    @media screen and (max-width:$tablet) {
+        padding-top: 1rem;
+    }
+
+    @media screen and (min-width:$tablet) {
+        padding-top: 1.5rem;
+    }
+}
+
+
+.hero {
+    @include desktop {
+        margin-top: 4.5rem;
+    }
+
+
+    @media screen and (max-width:$desktop) {
+        margin-top: 38px;
+    }
+}
+
+.courses {
+    @media screen and (min-width:$tablet) {
+        margin-top: 15.625rem;
+
+    }
+}
+
+.footer {
+    margin-top: 5rem;
 }

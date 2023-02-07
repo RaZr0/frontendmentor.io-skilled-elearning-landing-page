@@ -1,0 +1,118 @@
+@media screen and (max-width: 1440px) {
+  .courses .heading {
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
+}
+@media (min-width: 1440px) {
+  .courses .heading {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}
+.courses .container {
+  display: grid;
+}
+@media (max-width: 768px) {
+  .courses .container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .courses .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.25rem 0.6875rem;
+  }
+}
+@media (min-width: 1440px) {
+  .courses .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4.5rem 1.875rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .courses .container .card {
+    padding-top: 3.75rem;
+  }
+}
+.courses .container .card.preview {
+  color: white;
+  background-image: linear-gradient(#FF6F48, #F02AA6);
+}
+.courses .container .course {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 0;
+  position: relative;
+}
+.courses .container .course.animation {
+  padding-top: 3.75rem;
+}
+.courses .container .course.animation::before {
+  content: "";
+  background-image: url("../../../images/icon-animation.svg");
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: -23px;
+  left: 23px;
+}
+.courses .container .course.design {
+  padding-top: 3.75rem;
+}
+.courses .container .course.design::before {
+  content: "";
+  background-image: url("../../../images/icon-design.svg");
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: -23px;
+  left: 23px;
+}
+.courses .container .course.photography {
+  padding-top: 3.75rem;
+}
+.courses .container .course.photography::before {
+  content: "";
+  background-image: url("../../../images/icon-photography.svg");
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: -23px;
+  left: 23px;
+}
+.courses .container .course.crypto {
+  padding-top: 3.75rem;
+}
+.courses .container .course.crypto::before {
+  content: "";
+  background-image: url("../../../images/icon-crypto.svg");
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: -23px;
+  left: 23px;
+}
+.courses .container .course.business {
+  padding-top: 3.75rem;
+}
+.courses .container .course.business::before {
+  content: "";
+  background-image: url("../../../images/icon-business.svg");
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: -23px;
+  left: 23px;
+}
+.courses .container .course button {
+  align-self: flex-start;
+  color: var(--dark-pink);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-top: auto;
+}
+.courses .container .course .type {
+  font-size: 1.25rem;
+}

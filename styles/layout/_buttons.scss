@@ -1,0 +1,32 @@
+.button{
+    padding: 0.875rem 2rem;
+    border-radius: 20px;
+    color: white;
+    font-weight: 700;
+}
+
+
+.button-primary{
+    background-color: var(--dark-blue);
+
+    &:hover{
+        background-color : #666CA3;
+    }
+}
+ 
+.button-secondary{
+    background : linear-gradient( #FF6F48 , #F02AA6);
+
+    &:hover{
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    }
+}
+
+.button-idle{
+    background: linear-gradient(#4851FF , #F02AA6);
+
+    &:hover{
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+    }
+}
+ 

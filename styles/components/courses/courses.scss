@@ -1,0 +1,107 @@
+@import '../../layout/breakpoints';
+
+@mixin course-icon($iconUrl) {
+    padding-top: 3.75rem;
+    &::before {
+        content: "";
+        background-image: url($iconUrl);
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        top: -23px;
+        left: 23px;
+    }
+}
+
+
+.courses {
+
+    .heading{
+        @media screen and (max-width : $desktop) {
+           font-size: 1.5rem;
+           line-height: 32px;
+        }
+
+        @include desktop{
+            font-size: 2rem;
+            line-height: 40px;
+        }
+ 
+
+    }
+
+
+    .container {
+        display: grid;
+      
+
+        @include mobile{
+            grid-template-columns: 1fr;
+            gap: 2.5rem 0;
+        }
+
+        @include tablet{
+            grid-template-columns: 1fr 1fr;
+            gap: 3.25rem 0.6875rem;
+        }
+
+        @include desktop{
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4.5rem 1.875rem;
+        }
+
+        .card{
+            @media screen and (min-width:$tablet) {
+                padding-top: 3.75rem;
+            }
+
+        }
+
+        .card.preview {
+            color: white;
+            background-image: linear-gradient(#FF6F48, #F02AA6);
+        }
+
+        .course {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem 0;
+            position: relative;
+
+            &.animation {
+                @include course-icon('../../../images/icon-animation.svg')
+            }
+
+            &.design {
+                @include course-icon('../../../images/icon-design.svg')
+            }
+
+            &.photography {
+                @include course-icon('../../../images/icon-photography.svg')
+            }
+
+            &.crypto {
+                @include course-icon('../../../images/icon-crypto.svg')
+            }
+
+            &.business {
+                @include course-icon('../../../images/icon-business.svg')
+            }
+
+            button {
+                align-self: flex-start;
+                color: var(--dark-pink);
+                font-weight: 700;
+                font-size: 1.125rem;
+                margin-top: auto;
+            }
+
+            .type {
+                font-size: 1.25rem;
+            }
+
+
+        }
+    }
+
+}

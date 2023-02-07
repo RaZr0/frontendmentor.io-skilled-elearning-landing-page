@@ -1,0 +1,19 @@
+@import '../../layout/breakpoints';
+
+.footer {
+    background-color: var(--dark-blue);
+
+    @media screen and (max-width:$tablet) {
+        font-size: 2.5rem;
+        line-height: 51px;
+    }
+
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2.6875rem 0;
+        margin-bottom: 0;
+    }
+}

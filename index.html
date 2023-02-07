@@ -9,16 +9,21 @@
 
   <title>Skilled e-learning landing page</title>
   <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" href="./styles/header.css">
-  <link rel="stylesheet" href="./styles/hero.css">
+  <link rel="stylesheet" href="./styles/components/header/header.css">
+  <link rel="stylesheet" href="./styles/components/footer/footer.css">
+  <link rel="stylesheet" href="./styles/components/hero/hero.css">
+  <link rel="stylesheet" href="./styles/components/courses/courses.css">
 </head>
 
 <body>
 
   <header class="header">
     <div class="container">
-      <img src="./images/logo-dark.svg" alt="logo">
-      <button class="button primary-button  ">Get Started</button>
+      <a href="/">
+        <img src="./images/logo-dark.svg" alt="logo">
+      </a>
+
+      <button class="button button-primary  ">Get Started</button>
     </div>
   </header>
 
@@ -27,96 +32,112 @@
     <section class="hero">
       <div class="container">
         <div class="ad">
-          <h1>
+          <h1 class="heading">
             Maximize skill, minimize budget
           </h1>
           <p>
             Our modern courses across a range of in-demand skills will give you the
             knowledge you need to live the life you want.
           </p>
-          <button class="button secondary-button  ">
+          <button class="button button-secondary">
             Get Started
           </button>
         </div>
-        <img src="images/image-hero-desktop.png" alt="">
+        <picture class="hero-picture">
+          <source media="(min-width: 768.1px) and (max-width: 1440px)" srcset="images/image-hero-tablet.png" />
+          <source media="(min-width: 1440px)" srcset="images/image-hero-desktop.png" />
+          <img src="images/image-hero-mobile.png" alt="">
+        </picture>
+
       </div>
     </section>
 
-    <section class="content">
-      <div class="card">
-        Check out our most popular courses!
+    <section class="courses">
+      <div class="container">
+        <div class="card preview">
+          <h2 class="heading">
+            Check out our most popular courses!
+          </h2>
+
+        </div>
+        <div class="card course animation">
+          <h3 class="type">
+            Animation
+          </h3>
+          <p>
+            Learn the latest animation techniques to create stunning motion
+            design and captivate your audience.
+            Get Started
+          </p>
+          <button>
+            Get Started
+          </button>
+        </div>
+        <div class="card course design">
+          <h3 class="type">
+            Design
+          </h3>
+          <p>
+            Create beautiful, usable interfaces to help shape the future of
+            how the web looks.
+            Get Started
+          </p>
+          <button>
+            Get Started
+          </button>
+        </div>
+        <div class="card course photography">
+          <h3 class="type">
+            Photography
+          </h3>
+          <p>
+            Explore critical fundamentals like lighting, composition, and focus
+            to capture exceptional photos.
+            Get Started
+          </p>
+          <button>
+            Get Started
+          </button>
+        </div>
+        <div class="card course crypto">
+          <h3 class="type">
+            Crypto
+          </h3>
+          <p>
+            All you need to know to get started investing in crypto. Go from beginner
+            to advanced with this 54 hour course.
+            Get Started
+          </p>
+          <button>
+            Get Started
+          </button>
+        </div>
+        <div class="card course business">
+          <h3 class="type">
+            Business
+          </h3>
+          <p>
+            A step-by-step playbook to help you start, scale, and sustain your business
+            without outside investment.
+            Get Started
+          </p>
+          <button>
+            Get Started
+          </button>
+        </div>
       </div>
-      <div class="card course">
-        <h3>
-          Animation
-        </h3>
-        <p>
-          Learn the latest animation techniques to create stunning motion
-          design and captivate your audience.
-          Get Started
-        </p>
-        <button>
-          Get Started
-        </button>
-      </div>
-      <div class="card course">
-        <h3>
-          Design
-        </h3>
-        <p>
-          Create beautiful, usable interfaces to help shape the future of
-          how the web looks.
-          Get Started
-        </p>
-        <button>
-          Get Started
-        </button>
-      </div>
-      <div class="card course">
-        <h3>
-          Photography
-        </h3>
-        <p>
-          Explore critical fundamentals like lighting, composition, and focus
-          to capture exceptional photos.
-          Get Started
-        </p>
-        <button>
-          Get Started
-        </button>
-      </div>
-      <div class="card course">
-        <h3>
-          Crypto
-        </h3>
-        <p>
-          All you need to know to get started investing in crypto. Go from beginner
-          to advanced with this 54 hour course.
-          Get Started
-        </p>
-        <button>
-          Get Started
-        </button>
-      </div>
-      <div class="card course">
-        <h3>
-          Business
-        </h3>
-        <p>
-          A step-by-step playbook to help you start, scale, and sustain your business
-          without outside investment.
-          Get Started
-        </p>
-        <button>
-          Get Started
-        </button>
-      </div>
+
     </section>
   </main>
 
-  <footer>
-    <img src="" alt="logo">
-    <button>Get Started</button>
+  <footer class="footer">
+    <div class="container">
+      <a href="/">
+        <img src="./images/logo-light.svg" alt="logo">
+      </a>
+
+      <button class="button button-idle">Get Started</button>
+    </div>
   </footer>
 
 </body>
